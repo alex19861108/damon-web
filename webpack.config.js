@@ -59,7 +59,7 @@ var config = {
         //new webpack.optimize.OccurenceOrderPlugin()
 
     ],
-    devtool: 'cheap-module-source-map',
+    //devtool: 'cheap-module-source-map',
     //entry: {
         //dashboardV1: './src/pages/dashboardV1/js/dashboard',
         //widgets: ['./src/pages/widgets-page/js/widgets-page'],
@@ -84,16 +84,27 @@ var config = {
         ],
         loaders: [
             {
-                test: /\.jsx?$/,
-                loaders: 'babel-loader',
-                query: {
-                    presets: ['react']
-                },
-                include: path.join(__dirname, 'public'),
-                exclude: /(node_modules|bower_components)/
-
+                test: /\.css$/,
+                loader: 'style-loader!css-loader'
             },
             {
+                test:/\.(png|jpg)$/,
+                loader:'url-loader?limit=8192'
+            },
+            {
+                test:/\.less$/,
+                loader:'style-loader!css-loader!less-loader'
+            },
+            {
+                test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                loader: "url-loader?limit=10000&mimetype=application/font-woff"
+            },
+            {
+                test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                loader: "file-loader"
+            },
+            {
+                test: /\.jsx?$/,
                 loader: 'babel-loader', //'jsx-loader'
                 query: {
                     presets: ['react', 'es2015']

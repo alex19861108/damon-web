@@ -19,7 +19,6 @@ import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {Button} from "react-bootstrap";
-import LayoutMain from "react-admin-lte/lib/LayoutMain";
 
 class App extends Component {
     render() {
