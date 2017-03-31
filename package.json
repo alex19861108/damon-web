@@ -16,7 +16,6 @@
     "file-loader": "^0.10.1",
     "less-loader": "^4.0.2",
     "react": "^15.4.2",
-    "react-admin-lte": "0.0.38",
     "react-dom": "^15.4.2",
     "react-scripts": "0.9.5",
     "style-loader": "^0.16.1",

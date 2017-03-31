@@ -72,7 +72,8 @@ var config = {
     entry:path.resolve(__dirname,'src/index.js'),
 
     output: {
-        path: path.join(__dirname, "public"),
+        //path: path.join(__dirname, "public"),
+        path: __dirname,
         filename: "dist/js/[name].bundle.js",
         libraryTarget: "umd",
         umdNamedDefine: true,
