@@ -3,14 +3,21 @@
  */
 
 var webpack = require('webpack');
-var UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
+//var UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
 var path = require("path");
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 //var env = require('yargs').argv.mode;
 
 var lib_dir = __dirname + '/public/libraries',
     node_dir = __dirname + '/node_modules',
     bower_dir = __dirname + '/bower_components',
     plugins_dir = __dirname + '/public/plugins';
+
+var locals = {
+    routes: [
+        '/',
+    ]
+};
 
 var config = {
 
@@ -57,7 +64,7 @@ var config = {
         }),
         new webpack.optimize.DedupePlugin(),
         //new webpack.optimize.OccurenceOrderPlugin()
-
+        new ExtractTextPlugin(path.resolve(__dirname, "dist/css/[name].min.css")),
     ],
     //devtool: 'cheap-module-source-map',
     //entry: {
@@ -72,7 +79,8 @@ var config = {
     entry:path.resolve(__dirname,'src/index.js'),
 
     output: {
-        path: path.join(__dirname, "public"),
+        //path: path.join(__dirname, "public"),
+        path: __dirname,
         filename: "dist/js/[name].bundle.js",
         libraryTarget: "umd",
         umdNamedDefine: true,
@@ -85,7 +93,7 @@ var config = {
         loaders: [
             {
                 test: /\.css$/,
-                loader: 'style-loader!css-loader'
+                loader: 'style-loader!css-loader?modules'
             },
             {
                 test:/\.(png|jpg)$/,
