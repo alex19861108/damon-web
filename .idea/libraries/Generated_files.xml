@@ -3,9 +3,7 @@
     <properties>
       <sourceFilesUrls>
         <item url="file://$PROJECT_DIR$/webpack.config-compiled.js" />
-        <item url="file://$PROJECT_DIR$/public/dist/js/main.bundle-compiled.js" />
         <item url="file://$PROJECT_DIR$/build/dist/js/main.bundle-compiled.js" />
-        <item url="file://$PROJECT_DIR$/build/static/js/main.fc1d9445-compiled.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
@@ -34,10 +32,10 @@
       <root url="file://$PROJECT_DIR$/build/static/js/main.ed7bdb24-compiled.js" />
       <root url="file://$PROJECT_DIR$/build/static/js/main.ed7bdb24-compiled.js" />
       <root url="file://$PROJECT_DIR$/build/static/js/main.ed7bdb24-compiled.js" />
-      <root url="file://$PROJECT_DIR$/webpack.config-compiled.js" />
       <root url="file://$PROJECT_DIR$/public/dist/js/main.bundle-compiled.js" />
-      <root url="file://$PROJECT_DIR$/build/dist/js/main.bundle-compiled.js" />
       <root url="file://$PROJECT_DIR$/build/static/js/main.fc1d9445-compiled.js" />
+      <root url="file://$PROJECT_DIR$/webpack.config-compiled.js" />
+      <root url="file://$PROJECT_DIR$/build/dist/js/main.bundle-compiled.js" />
     </CLASSES>
     <SOURCES />
   </library>
