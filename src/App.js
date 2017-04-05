@@ -18,12 +18,18 @@ class App extends Component {
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {Button} from "react-bootstrap";
+import {Navbar} from "react-bootstrap";
 
 class App extends Component {
     render() {
         return (
-            <Button>what?</Button>
+            <Navbar>
+                <Navbar.Header>
+                    <Navbar.Brand>
+                        <a href="#">Damon</a>
+                    </Navbar.Brand>
+                </Navbar.Header>
+            </Navbar>
         );
     }
 }
